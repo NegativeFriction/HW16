@@ -8,6 +8,7 @@ function Save(props) {
         <h5 className="card-title"> {props.title}</h5>
         <img
           src={props.image}
+          alt={props.title}
           style={{ float: "left" }}
           className="img-thumbnail"
         />

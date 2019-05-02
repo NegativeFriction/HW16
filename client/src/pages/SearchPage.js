@@ -59,6 +59,7 @@ class BookSearch extends React.Component {
             name="search"
             placeholder="Search"
           />
+          {/* Why u no work? */}
           <FormBtn onClick={this.handleFormSubmit}>Search</FormBtn>
         </form>
         <br />
@@ -78,8 +79,8 @@ class BookSearch extends React.Component {
                 }
                 description={book.volumeInfo.description}
                 link={book.volumeInfo.infoLink}
-                handleSaveBook={() =>
-                  this.handleSaveBook({
+                saveBook={() =>
+                  this.saveBook({
                     src: book.volumeInfo.imageLinks.thumbnail,
                     title: book.volumeInfo.title,
                     authors: book.volumeInfo.authors,
