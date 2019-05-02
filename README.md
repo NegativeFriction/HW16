@@ -1,2 +1,2 @@
-# HW16
-A Google Books searcher
+# MTG-Project-3
+Magic the Gathering Deck Builder
