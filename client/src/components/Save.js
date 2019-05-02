@@ -1,6 +1,7 @@
 import React from "react";
 
 function Save(props) {
+  console.log(props, "props");
   return (
     <div className="card">
       <div className="card-header">Result</div>

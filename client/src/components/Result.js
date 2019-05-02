@@ -7,14 +7,14 @@ function Result(props) {
       <div className="card-body">
         <h5 className="card-title"> {props.title}</h5>
         <img
-          src={props.src}
+          src={props.image}
           alt={props.title}
           style={{ float: "left" }}
           className="img-thumbnail"
         />
 
         <button
-          onClick={props.handleSaveBook}
+          onClick={props.saveBook}
           style={{ float: "right", marginRight: 100, color: "black" }}
           className="btn btn-primary btn-lg"
         >

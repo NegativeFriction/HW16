@@ -11,6 +11,7 @@ class BookSearch extends React.Component {
   };
 
   search = query => {
+    console.log("Search got called");
     API.search(query)
       .then(res => {
         this.setState(
@@ -41,6 +42,7 @@ class BookSearch extends React.Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
+    console.log("Handle Form Submit got called");
     this.search(this.state.search);
   };
 
@@ -70,7 +72,7 @@ class BookSearch extends React.Component {
             {this.state.bookData.map(book => (
               <Result
                 key={book._id}
-                src={book.volumeInfo.imageLinks.thumbnail}
+                image={book.volumeInfo.imageLinks.thumbnail}
                 title={book.volumeInfo.title}
                 authors={
                   book.volumeInfo.authors
@@ -79,15 +81,16 @@ class BookSearch extends React.Component {
                 }
                 description={book.volumeInfo.description}
                 link={book.volumeInfo.infoLink}
-                saveBook={() =>
+                saveBook={() => {
+                  console.log(book.volumeInfo.imageLinks);
                   this.saveBook({
-                    src: book.volumeInfo.imageLinks.thumbnail,
+                    image: book.volumeInfo.imageLinks.thumbnail,
                     title: book.volumeInfo.title,
                     authors: book.volumeInfo.authors,
                     description: book.volumeInfo.description,
                     link: book.volumeInfo.infoLink
-                  })
-                }
+                  });
+                }}
               />
             ))}
           </span>
